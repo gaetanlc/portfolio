@@ -283,3 +283,65 @@ footer {
 .lightbox__close:hover {
   background: rgba(124, 106, 247, 0.8);
 }
+
+/* COMPETENCES */
+.competences__grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+
+.competence__categorie {
+  background: #1a1a1a;
+  border: 1px solid #2a2a2a;
+  border-radius: 8px;
+  padding: 24px;
+}
+
+.competence__categorie h3 {
+  font-size: 1rem;
+  color: #7c6af7;
+  margin-bottom: 16px;
+}
+
+.competence__categorie ul {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.competence__categorie li {
+  color: #ccc;
+  font-size: 0.9rem;
+  padding-left: 12px;
+  border-left: 2px solid #7c6af7;
+}
+
+/* CONTACT */
+.contact__intro {
+  color: #ccc;
+  font-size: 1rem;
+  margin-bottom: 32px;
+}
+
+.contact__links {
+  display: flex;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+
+.contact__links a {
+  background: transparent;
+  border: 1px solid #7c6af7;
+  color: #f0f0f0;
+  text-decoration: none;
+  padding: 12px 24px;
+  border-radius: 6px;
+  font-size: 0.95rem;
+  transition: color 0.2s;
+}
+
+.contact__links a:hover {
+  color: #7c6af7;
+}
