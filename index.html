@@ -33,6 +33,16 @@
             <h2>Projets</h2>
 
             <article class="projet">
+                <div class="carousel" id="carousel-kasa">
+                    <div class="carousel__slides">
+                        <img src="assets/Kasa page accueil.png" alt="Kasa page accueil"
+                            class="carousel__slide active" />
+                        <img src="assets/kasa appart 1.png" alt="Kasa appartement" class="carousel__slide" />
+                        <img src="assets/kasa page a propos.png" alt="Kasa à propos" class="carousel__slide" />
+                    </div>
+                    <button class="carousel__btn prev" onclick="changeSlide('carousel-kasa', -1)">&#8249;</button>
+                    <button class="carousel__btn next" onclick="changeSlide('carousel-kasa', 1)">&#8250;</button>
+                </div>
                 <h3>Kasa</h3>
                 <p class="stack">React 18 · Vite · React Router · Sass</p>
                 <p>Plateforme de location d'appartements entre particuliers. Refonte complète du front-end à partir de
@@ -41,6 +51,15 @@
             </article>
 
             <article class="projet">
+                <div class="carousel" id="carousel-argentbank">
+                    <div class="carousel__slides">
+                        <img src="assets/argent bank accueil.png" alt="ArgentBank accueil"
+                            class="carousel__slide active" />
+                        <img src="assets/page log in argentbank.png" alt="ArgentBank login" class="carousel__slide" />
+                    </div>
+                    <button class="carousel__btn prev" onclick="changeSlide('carousel-argentbank', -1)">&#8249;</button>
+                    <button class="carousel__btn next" onclick="changeSlide('carousel-argentbank', 1)">&#8250;</button>
+                </div>
                 <h3>ArgentBank</h3>
                 <p class="stack">React 18 · Redux Toolkit · Vite · Node.js · MongoDB</p>
                 <p>Application bancaire en ligne avec authentification JWT complète, gestion d'état global via Redux,
@@ -77,7 +96,47 @@
     <footer>
         <p>© 2026 Gaëtan Le Corre</p>
     </footer>
+    <script>
+        function changeSlide(carouselId, direction) {
+            const carousel = document.getElementById(carouselId);
+            const slides = carousel.querySelectorAll('.carousel__slide');
+            let active = carousel.querySelector('.carousel__slide.active');
+            let index = Array.from(slides).indexOf(active);
 
+            active.classList.remove('active');
+            active.classList.add(direction === 1 ? 'slide-out-left' : 'slide-out-right');
+
+            index = (index + direction + slides.length) % slides.length;
+            slides[index].classList.add(direction === 1 ? 'slide-in-right' : 'slide-in-left');
+
+            setTimeout(() => {
+                active.classList.remove('slide-out-left', 'slide-out-right');
+                slides[index].classList.remove('slide-in-right', 'slide-in-left');
+                slides[index].classList.add('active');
+            }, 400);
+        }
+
+        document.querySelectorAll('.carousel').forEach(carousel => {
+            setInterval(() => changeSlide(carousel.id, 1), 5000);
+        });
+        function openLightbox(src, alt) {
+            document.getElementById('lightbox-img').src = src;
+            document.getElementById('lightbox-img').alt = alt;
+            document.getElementById('lightbox').classList.add('active');
+        }
+
+        function closeLightbox() {
+            document.getElementById('lightbox').classList.remove('active');
+        }
+
+        document.querySelectorAll('.carousel__slide').forEach(img => {
+            img.style.cursor = 'zoom-in';
+            img.addEventListener('click', () => openLightbox(img.src, img.alt));
+        });
+    </script>
+    <div id="lightbox" onclick="closeLightbox()">
+        <img id="lightbox-img" src="" alt="" />
+    </div>
 </body>
 
 </html>
