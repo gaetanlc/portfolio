@@ -15,7 +15,7 @@ body {
 header {
   text-align: center;
   padding: 80px 20px 60px;
-  border-bottom: 1px solid #7c6af7;
+  border-bottom: 1px solid #a394f8;
 }
 
 header h1 {
@@ -45,7 +45,7 @@ nav a {
 }
 
 nav a:hover {
-  border-bottom-color: #7c6af7;
+  border-bottom-color: #a394f8;
 }
 
 /* MAIN */
@@ -61,7 +61,7 @@ main {
 h2 {
   font-size: 1.5rem;
   margin-bottom: 32px;
-  color: #9d8ff5; 
+  color: #a394f8;
 }
 
 /* A PROPOS */
@@ -86,7 +86,7 @@ h2 {
 }
 
 .projet .stack {
-  color: #9d8ff5;
+  color: #a394f8;
   font-size: 0.85rem;
   margin-bottom: 12px;
 }
@@ -101,7 +101,7 @@ h2 {
   color: #f0f0f0;
   font-size: 0.9rem;
   text-decoration: none;
-  border-bottom: 1px solid #7c6af7;
+  border-bottom: 1px solid #a394f8;
 }
 
 .projet a:hover {
@@ -110,7 +110,7 @@ h2 {
 
 /* CONTACT */
 #contact a {
-  color: #7c6af7;
+  color: #a394f8;
   text-decoration: none;
   font-size: 1rem;
 }
@@ -315,7 +315,7 @@ footer {
   color: #ccc;
   font-size: 0.9rem;
   padding-left: 12px;
-  border-left: 2px solid #7c6af7;
+  border-left: 2px solid #a394f8;
 }
 
 /* CONTACT */
@@ -333,7 +333,7 @@ footer {
 
 .contact__links a {
   background: transparent;
-  border: 1px solid #7c6af7;
+  border: 1px solid #a394f8;
   color: #f0f0f0;
   text-decoration: none;
   padding: 12px 24px;
