@@ -4,8 +4,20 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="description" content="Portfolio de Gaëtan Le Corre, Intégrateur Web junior basé en Bretagne." />
-    <title>Gaëtan Le Corre — Intégrateur Web</title>
+    <meta name="description"
+        content="Portfolio de Gaëtan Le Corre, intégrateur web junior basé en Bretagne. Spécialisé React, JavaScript, HTML/CSS, SEO et accessibilité." />
+    <meta name="keywords"
+        content="intégrateur web, développeur React, JavaScript, HTML CSS, Bretagne, Brest, junior, portfolio" />
+    <meta name="author" content="Gaëtan Le Corre" />
+
+    <!-- Open Graph -->
+    <meta property="og:title" content="Gaëtan Le Corre — Intégrateur Web junior" />
+    <meta property="og:description"
+        content="Portfolio de Gaëtan Le Corre, intégrateur web junior basé en Bretagne. React, JavaScript, SEO, accessibilité." />
+    <meta property="og:url" content="https://gaetanlc.github.io/portfolio/" />
+    <meta property="og:type" content="website" />
+
+    <title>Gaëtan Le Corre — Intégrateur Web junior Bretagne</title>
     <link rel="stylesheet" href="style.css" />
 </head>
 
@@ -28,6 +40,7 @@
                 formation Intégrateur Web (Bac+2). Passionné par la création d'interfaces modernes, accessibles et
                 performantes.</p>
         </section>
+
         <section id="competences">
             <h2>Compétences</h2>
             <div class="competences__grid">
@@ -66,62 +79,54 @@
                 </div>
             </div>
         </section>
+
         <section id="projets">
             <h2>Projets</h2>
 
             <article class="projet">
                 <div class="carousel" id="carousel-kasa">
                     <div class="carousel__slides">
-                        <img src="assets/Kasa page accueil.png" alt="Kasa page accueil"
-                            class="carousel__slide active" />
+                        <img src="assets/Kasa page accueil.png" alt="Kasa page accueil" class="carousel__slide active" />
                         <img src="assets/kasa appart 1.png" alt="Kasa appartement" class="carousel__slide" />
                         <img src="assets/kasa page a propos.png" alt="Kasa à propos" class="carousel__slide" />
                     </div>
-                    <button class="carousel__btn prev" onclick="changeSlide('carousel-kasa', -1)">&#8249;</button>
-                    <button class="carousel__btn next" onclick="changeSlide('carousel-kasa', 1)">&#8250;</button>
+                    <button class="carousel__btn prev" onclick="changeSlide('carousel-kasa', -1)" aria-label="Image précédente Kasa">&#8249;</button>
+                    <button class="carousel__btn next" onclick="changeSlide('carousel-kasa', 1)" aria-label="Image suivante Kasa">&#8250;</button>
                 </div>
                 <h3>Kasa</h3>
                 <p class="stack">React 18 · Vite · React Router · Sass</p>
-                <p>Plateforme de location d'appartements entre particuliers. Refonte complète du front-end à partir de
-                    maquettes Figma, avec composants réutilisables et navigation dynamique.</p>
+                <p>Plateforme de location d'appartements entre particuliers. Refonte complète du front-end à partir de maquettes Figma, avec composants réutilisables et navigation dynamique.</p>
                 <a href="https://github.com/gaetanlc/kasa" target="_blank">Voir sur GitHub</a>
             </article>
 
             <article class="projet">
                 <div class="carousel" id="carousel-argentbank">
                     <div class="carousel__slides">
-                        <img src="assets/argent bank accueil.png" alt="ArgentBank accueil"
-                            class="carousel__slide active" />
+                        <img src="assets/argent bank accueil.png" alt="ArgentBank accueil" class="carousel__slide active" />
                         <img src="assets/page log in argentbank.png" alt="ArgentBank login" class="carousel__slide" />
                     </div>
-                    <button class="carousel__btn prev" onclick="changeSlide('carousel-argentbank', -1)">&#8249;</button>
-                    <button class="carousel__btn next" onclick="changeSlide('carousel-argentbank', 1)">&#8250;</button>
+                    <button class="carousel__btn prev" onclick="changeSlide('carousel-argentbank', -1)" aria-label="Image précédente ArgentBank">&#8249;</button>
+                    <button class="carousel__btn next" onclick="changeSlide('carousel-argentbank', 1)" aria-label="Image suivante ArgentBank">&#8250;</button>
                 </div>
                 <h3>ArgentBank</h3>
                 <p class="stack">React 18 · Redux Toolkit · Vite · Node.js · MongoDB</p>
-                <p>Application bancaire en ligne avec authentification JWT complète, gestion d'état global via Redux,
-                    routes protégées et modélisation d'API avec Swagger.</p>
+                <p>Application bancaire en ligne avec authentification JWT complète, gestion d'état global via Redux, routes protégées et modélisation d'API avec Swagger.</p>
                 <a href="https://github.com/gaetanlc/Project-10-Bank-API" target="_blank">Voir sur GitHub</a>
             </article>
 
             <article class="projet">
                 <div class="carousel" id="carousel-724events">
                     <div class="carousel__slides">
-                        <img src="assets/724 events accueil.png" alt="724 Events accueil"
-                            class="carousel__slide active" />
-                        <img src="assets/724 events filtre nos réalisations.png" alt="724 Events filtres"
-                            class="carousel__slide" />
-                        <img src="assets/724 events contact + footer.png" alt="724 Events contact"
-                            class="carousel__slide" />
+                        <img src="assets/724 events accueil.png" alt="724 Events accueil" class="carousel__slide active" />
+                        <img src="assets/724 events filtre nos réalisations.png" alt="724 Events filtres" class="carousel__slide" />
+                        <img src="assets/724 events contact + footer.png" alt="724 Events contact" class="carousel__slide" />
                     </div>
-                    <button class="carousel__btn prev" onclick="changeSlide('carousel-724events', -1)">&#8249;</button>
-                    <button class="carousel__btn next" onclick="changeSlide('carousel-724events', 1)">&#8250;</button>
+                    <button class="carousel__btn prev" onclick="changeSlide('carousel-724events', -1)" aria-label="Image précédente 724 Events">&#8249;</button>
+                    <button class="carousel__btn next" onclick="changeSlide('carousel-724events', 1)" aria-label="Image suivante 724 Events">&#8250;</button>
                 </div>
                 <h3>724 Events</h3>
                 <p class="stack">React 18 · Jest · Debugging</p>
-                <p>Débogage d'une application React événementielle existante. Identification et correction de 9 bugs,
-                    rédaction d'un cahier de recette BDD avec 12 scénarios Given/When/Then, et passage de 16/16 tests
-                    Jest.</p>
+                <p>Débogage d'une application React événementielle existante. Identification et correction de 9 bugs, rédaction d'un cahier de recette BDD avec 12 scénarios Given/When/Then, et passage de 16/16 tests Jest.</p>
                 <a href="https://github.com/gaetanlc/724events" target="_blank">Voir sur GitHub</a>
             </article>
 
@@ -130,37 +135,27 @@
                     <div class="carousel__slides">
                         <img src="assets/accueil nina.png" alt="Nina Carducci accueil" class="carousel__slide active" />
                         <img src="assets/portfolio nina.png" alt="Nina Carducci portfolio" class="carousel__slide" />
-                        <img src="assets/service + contact nina.png" alt="Nina Carducci services"
-                            class="carousel__slide" />
+                        <img src="assets/service + contact nina.png" alt="Nina Carducci services" class="carousel__slide" />
                     </div>
-                    <button class="carousel__btn prev" onclick="changeSlide('carousel-nina', -1)">&#8249;</button>
-                    <button class="carousel__btn next" onclick="changeSlide('carousel-nina', 1)">&#8250;</button>
+                    <button class="carousel__btn prev" onclick="changeSlide('carousel-nina', -1)" aria-label="Image précédente Nina Carducci">&#8249;</button>
+                    <button class="carousel__btn next" onclick="changeSlide('carousel-nina', 1)" aria-label="Image suivante Nina Carducci">&#8250;</button>
                 </div>
                 <h3>Nina Carducci</h3>
                 <p class="stack">SEO · Accessibilité · Performance · Lighthouse</p>
-                <p>Optimisation SEO et performance d'un site portfolio de photographe. Résultat : score Lighthouse
-                    99/100/100/100 et 0 erreur WAVE. Livraison d'un rapport d'audit professionnel complet.</p>
+                <p>Optimisation SEO et performance d'un site portfolio de photographe. Résultat : score Lighthouse 99/100/100/100 et 0 erreur WAVE. Livraison d'un rapport d'audit professionnel complet.</p>
                 <a href="https://github.com/gaetanlc/ninacarducci.github.io" target="_blank">Voir sur GitHub</a>
             </article>
 
         </section>
 
         <section id="contact">
-            <section id="contact">
-                <h2>Contact</h2>
-                <p class="contact__intro">Disponible pour un premier poste en intégration/développeur web. N'hésitez pas à me contacter !</p>
-                <div class="contact__links">
-                    <a href="https://github.com/gaetanlc" target="_blank">
-                        GitHub
-                    </a>
-                    <a href="mailto:lecorre.gaetan1@gmail.com" target="_blank">
-                        Email
-                    </a>
-                    <a href="#" target="_blank">
-                        LinkedIn
-                    </a>
-                </div>
-            </section>
+            <h2>Contact</h2>
+            <p class="contact__intro">Disponible pour un premier poste en intégration/développeur web. N'hésitez pas à me contacter !</p>
+            <div class="contact__links">
+                <a href="https://github.com/gaetanlc" target="_blank">GitHub</a>
+                <a href="mailto:lecorre.gaetan1@gmail.com" target="_blank">Email</a>
+                <a href="#" target="_blank">LinkedIn</a>
+            </div>
         </section>
 
     </main>
@@ -168,6 +163,14 @@
     <footer>
         <p>© 2026 Gaëtan Le Corre</p>
     </footer>
+
+    <div id="lightbox">
+        <button class="lightbox__btn prev" onclick="lightboxSlide(-1)" aria-label="Image précédente">&#8249;</button>
+        <img id="lightbox-img" src="" alt="" />
+        <button class="lightbox__btn next" onclick="lightboxSlide(1)" aria-label="Image suivante">&#8250;</button>
+        <button class="lightbox__close" onclick="closeLightbox()" aria-label="Fermer">&#x2715;</button>
+    </div>
+
     <script>
         function changeSlide(carouselId, direction) {
             const carousel = document.getElementById(carouselId);
@@ -233,12 +236,7 @@
             if (e.target === this) closeLightbox();
         });
     </script>
-    <div id="lightbox">
-        <button class="lightbox__btn prev" onclick="lightboxSlide(-1)">&#8249;</button>
-        <img id="lightbox-img" src="" alt="" />
-        <button class="lightbox__btn next" onclick="lightboxSlide(1)">&#8250;</button>
-        <button class="lightbox__close" onclick="closeLightbox()">&#x2715;</button>
-    </div>
+
 </body>
 
 </html>
