@@ -61,7 +61,7 @@ main {
 h2 {
   font-size: 1.5rem;
   margin-bottom: 32px;
-  color: #7c6af7;
+  color: #9d8ff5;
 }
 
 /* A PROPOS */
@@ -86,7 +86,7 @@ h2 {
 }
 
 .projet .stack {
-  color: #7c6af7;
+  color: #9d8ff5;
   font-size: 0.85rem;
   margin-bottom: 12px;
 }
@@ -300,7 +300,7 @@ footer {
 
 .competence__categorie h3 {
   font-size: 1rem;
-  color: #7c6af7;
+  color: #9d8ff5;
   margin-bottom: 16px;
 }
 
