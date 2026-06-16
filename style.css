@@ -355,3 +355,15 @@ footer {
 .contact__links a:hover {
   color: #7c6af7;
 }
+
+.competence__categorie li {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.competence__categorie li i {
+  font-size: 1.2rem;
+  width: 20px;
+  text-align: center;
+}
