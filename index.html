@@ -43,6 +43,35 @@
                 performantes.</p>
         </section>
 
+        <section id="parcours">
+            <h2>Parcours</h2>
+            <div class="timeline">
+                <div class="timeline__item">
+                    <div class="timeline__date">Octobre 2025 — Juin 2026</div>
+                    <div class="timeline__content">
+                        <h3>Formation Intégrateur Web Bac+2</h3>
+                        <p>OpenClassrooms — Formation intensive en développement web. HTML/CSS, JavaScript, React,
+                            Node.js, accessibilité et SEO.</p>
+                    </div>
+                </div>
+                <div class="timeline__item">
+                    <div class="timeline__date">Septembre 2025</div>
+                    <div class="timeline__content">
+                        <h3>Reconversion professionnelle</h3>
+                        <p>Quitte mon poste d'Assistant Manager pour me consacrer pleinement au développement web.</p>
+                    </div>
+                </div>
+                <div class="timeline__item">
+                    <div class="timeline__date">Avant 2025</div>
+                    <div class="timeline__content">
+                        <h3>Parcours Commerce & Management</h3>
+                        <p>Plusieurs années en commerce, globalement renseignement client, assistant manager dans le
+                            secteur du loisir.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
         <section id="competences">
             <h2>Compétences</h2>
             <div class="competences__grid">
@@ -87,6 +116,7 @@
         <section id="projets">
             <h2>Projets</h2>
             <div class="projets__grid">
+
                 <article class="projet">
                     <div class="carousel" id="carousel-kasa">
                         <div class="carousel__slides">
@@ -204,6 +234,7 @@
                         <a href="https://github.com/gaetanlc/ninacarducci.github.io" target="_blank">GitHub</a>
                     </div>
                 </article>
+
             </div>
         </section>
 
@@ -211,7 +242,6 @@
             <h2>Contact</h2>
             <p class="contact__intro">Disponible pour un premier poste en intégration/développeur web. N'hésitez pas à
                 me contacter !</p>
-
             <form id="contact-form">
                 <div class="form__group">
                     <label for="nom">Nom</label>
@@ -228,7 +258,6 @@
                 <button type="submit" class="projet__btn">Envoyer</button>
                 <p id="form-status"></p>
             </form>
-
             <div class="contact__links">
                 <a href="https://github.com/gaetanlc" target="_blank">GitHub</a>
                 <a href="#" target="_blank">LinkedIn</a>
@@ -433,32 +462,32 @@
             if (e.target === this) closeModal();
         });
 
-            const contactForm = document.getElementById('contact-form');
-            const formStatus = document.getElementById('form-status');
+        const contactForm = document.getElementById('contact-form');
+        const formStatus = document.getElementById('form-status');
 
-            contactForm.addEventListener('submit', async function (e) {
-                e.preventDefault();
-                const data = new FormData(contactForm);
-                try {
-                    const response = await fetch('https://formspree.io/f/xlgkvgon', {
-                        method: 'POST',
-                        body: data,
-                        headers: { 'Accept': 'application/json' }
-                    });
-                    if (response.ok) {
-                        formStatus.textContent = '✅ Message envoyé ! Je vous répondrai dès que possible.';
-                        formStatus.style.color = '#a394f8';
-                        formStatus.style.marginTop = '12px';
-                        contactForm.querySelectorAll('input, textarea').forEach(el => el.value = '');
-                    } else {
-                        formStatus.textContent = '❌ Une erreur est survenue. Veuillez réessayer.';
-                        formStatus.style.color = '#ff6b6b';
-                    }
-                } catch (err) {
+        contactForm.addEventListener('submit', async function (e) {
+            e.preventDefault();
+            const data = new FormData(contactForm);
+            try {
+                const response = await fetch('https://formspree.io/f/xlgkvgon', {
+                    method: 'POST',
+                    body: data,
+                    headers: { 'Accept': 'application/json' }
+                });
+                if (response.ok) {
+                    formStatus.textContent = '✅ Message envoyé ! Je vous répondrai dès que possible.';
+                    formStatus.style.color = '#a394f8';
+                    formStatus.style.marginTop = '12px';
+                    contactForm.querySelectorAll('input, textarea').forEach(el => el.value = '');
+                } else {
                     formStatus.textContent = '❌ Une erreur est survenue. Veuillez réessayer.';
                     formStatus.style.color = '#ff6b6b';
                 }
-            });
+            } catch (err) {
+                formStatus.textContent = '❌ Une erreur est survenue. Veuillez réessayer.';
+                formStatus.style.color = '#ff6b6b';
+            }
+        });
     </script>
 
 </body>

@@ -605,3 +605,57 @@ footer {
     max-width: 95vw;
   }
 }
+
+/* TIMELINE */
+.timeline {
+  position: relative;
+  padding-left: 40px;
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+.timeline::before {
+  content: '';
+  position: absolute;
+  left: 8px;
+  top: 0;
+  bottom: 0;
+  width: 2px;
+  background: #a394f8;
+}
+
+.timeline__item {
+  position: relative;
+  margin-bottom: 40px;
+}
+
+.timeline__item::before {
+  content: '';
+  position: absolute;
+  left: -36px;
+  top: 6px;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: #a394f8;
+  border: 2px solid #0f0f0f;
+}
+
+.timeline__date {
+  color: #a394f8;
+  font-size: 0.9rem;
+  font-weight: 600;
+  margin-bottom: 6px;
+}
+
+.timeline__content h3 {
+  font-size: 1.1rem;
+  color: #f0f0f0;
+  margin-bottom: 6px;
+}
+
+.timeline__content p {
+  color: #ccc;
+  font-size: 0.95rem;
+  line-height: 1.6;
+}
