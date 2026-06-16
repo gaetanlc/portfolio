@@ -72,7 +72,9 @@
                     <h3>Qualité & Méthodes</h3>
                     <ul>
                         <li><i class="devicon-google-plain colored"></i> SEO technique</li>
-                        <li><i class="fa-solid fa-universal-access" style="color:#a394f8; font-size:1.2rem; width:20px; text-align:center;"></i> Accessibilité WCAG</li>
+                        <li><i class="fa-solid fa-universal-access"
+                                style="color:#a394f8; font-size:1.2rem; width:20px; text-align:center;"></i>
+                            Accessibilité WCAG</li>
                         <li><i class="devicon-chrome-plain colored"></i> Lighthouse / WAVE</li>
                         <li><i class="devicon-jest-plain colored"></i> Jest / Debugging</li>
                         <li><i class="devicon-figma-plain colored"></i> Figma</li>
@@ -102,7 +104,10 @@
                     <p class="stack">React 18 · Vite · React Router · Sass</p>
                     <p>Plateforme de location d'appartements entre particuliers. Refonte complète du front-end à partir
                         de maquettes Figma, avec composants réutilisables et navigation dynamique.</p>
-                    <a href="https://github.com/gaetanlc/kasa" target="_blank">Voir sur GitHub</a>
+                    <div class="projet__links">
+                        <button class="projet__btn" onclick="openModal('kasa')">Voir le détail</button>
+                        <a href="https://github.com/gaetanlc/kasa" target="_blank">GitHub</a>
+                    </div>
                 </article>
 
                 <article class="projet">
@@ -122,7 +127,10 @@
                     <p class="stack">React 18 · Redux Toolkit · Vite · Node.js · MongoDB</p>
                     <p>Application bancaire en ligne avec authentification JWT complète, gestion d'état global via
                         Redux, routes protégées et modélisation d'API avec Swagger.</p>
-                    <a href="https://github.com/gaetanlc/Project-10-Bank-API" target="_blank">Voir sur GitHub</a>
+                    <div class="projet__links">
+                        <button class="projet__btn" onclick="openModal('argentbank')">Voir le détail</button>
+                        <a href="https://github.com/gaetanlc/Project-10-Bank-API" target="_blank">GitHub</a>
+                    </div>
                 </article>
 
                 <article class="projet">
@@ -145,7 +153,10 @@
                     <p>Débogage d'une application React événementielle existante. Identification et correction de 9
                         bugs, rédaction d'un cahier de recette BDD avec 12 scénarios Given/When/Then, et passage de
                         16/16 tests Jest.</p>
-                    <a href="https://github.com/gaetanlc/724events" target="_blank">Voir sur GitHub</a>
+                    <div class="projet__links">
+                        <button class="projet__btn" onclick="openModal('724events')">Voir le détail</button>
+                        <a href="https://github.com/gaetanlc/724events" target="_blank">GitHub</a>
+                    </div>
                 </article>
 
                 <article class="projet">
@@ -167,7 +178,10 @@
                     <p class="stack">SEO · Accessibilité · Performance · Lighthouse</p>
                     <p>Optimisation SEO et performance d'un site portfolio de photographe. Résultat : score Lighthouse
                         99/100/100/100 et 0 erreur WAVE. Livraison d'un rapport d'audit professionnel complet.</p>
-                    <a href="https://github.com/gaetanlc/ninacarducci.github.io" target="_blank">Voir sur GitHub</a>
+                    <div class="projet__links">
+                        <button class="projet__btn" onclick="openModal('nina')">Voir le détail</button>
+                        <a href="https://github.com/gaetanlc/ninacarducci.github.io" target="_blank">GitHub</a>
+                    </div>
                 </article>
             </div>
         </section>
@@ -260,8 +274,127 @@
         document.getElementById('lightbox').addEventListener('click', function (e) {
             if (e.target === this) closeLightbox();
         });
+
+        const projetsData = {
+            kasa: {
+                titre: 'Kasa',
+                contexte: 'Plateforme de location d\'appartements entre particuliers. Mission : refonte complète du front-end à partir de maquettes Figma, en passant d\'une stack obsolète à React.',
+                stack: 'React 18 · Vite · React Router v6 · Sass · BEM',
+                competences: [
+                    'Mise en place du routing avec React Router (routes dynamiques, page 404)',
+                    'Création de composants réutilisables (Slideshow, Collapse, Banner, Card)',
+                    'Gestion d\'état local avec useState',
+                    'Récupération de données via un fichier JSON local',
+                    'Intégration pixel-perfect depuis des maquettes Figma',
+                    'Architecture de styles avec Sass et méthodologie BEM'
+                ],
+                resultats: 'Application déployée, responsive mobile/desktop, avec navigation fluide entre les annonces et pages de détail. Projet validé avec succès.',
+                perspectives: 'Remplacer le JSON local par une vraie API REST, ajouter un système de filtres/recherche, et optimiser les performances avec lazy loading des images.',
+                github: 'https://github.com/gaetanlc/kasa'
+            },
+            argentbank: {
+                titre: 'ArgentBank',
+                contexte: 'Application bancaire en ligne fictive. Mission : développer l\'interface front-end complète et l\'intégrer avec une API back-end existante, incluant un système d\'authentification JWT.',
+                stack: 'React 18 · Vite · Redux Toolkit · React Router v6 · Node.js · MongoDB · Swagger/OpenAPI',
+                competences: [
+                    'Authentification complète avec JWT (login, token, logout)',
+                    'Gestion d\'état global avec Redux Toolkit (authSlice)',
+                    'Routes protégées avec composant PrivateRoute',
+                    'Communication avec une API REST via fetch',
+                    'Modélisation d\'endpoints avec Swagger/OpenAPI',
+                    'Architecture front-end full-stack'
+                ],
+                resultats: 'Application fonctionnelle avec login/logout, affichage du profil, modification du username, et routes protégées. Projet défendu et validé avec succès.',
+                perspectives: 'Implémenter les endpoints de transaction en front-end (Phase 2), ajouter des tests unitaires, et améliorer la gestion des erreurs réseau.',
+                github: 'https://github.com/gaetanlc/Project-10-Bank-API'
+            },
+            '724events': {
+                titre: '724 Events',
+                contexte: 'Application React événementielle existante présentant des bugs. Mission : identifier et corriger les bugs, puis rédiger un cahier de recette BDD.',
+                stack: 'React 18 · Jest · JavaScript ES6+',
+                competences: [
+                    'Lecture et compréhension de code existant',
+                    'Identification et correction de 9 bugs (getMonth(), sort, DataContext...)',
+                    'Rédaction de 12 scénarios Given/When/Then',
+                    'Passage de 5 tests Jest échoués à 16/16 tests validés',
+                    'Débogage avec les DevTools Chrome',
+                    'Méthodologie BDD (Behavior Driven Development)'
+                ],
+                resultats: '9 bugs corrigés, 16/16 tests Jest validés, cahier de recette BDD complet avec 12 scénarios. Projet validé avec succès.',
+                perspectives: 'Ajouter des tests unitaires supplémentaires, refactoriser certains composants pour améliorer la maintenabilité.',
+                github: 'https://github.com/gaetanlc/724events'
+            },
+            nina: {
+                titre: 'Nina Carducci',
+                contexte: 'Site portfolio d\'une photographe avec des performances dégradées. Mission : optimiser le SEO, les performances et l\'accessibilité du site.',
+                stack: 'HTML · CSS · JavaScript · Lighthouse · WAVE · Schema.org',
+                competences: [
+                    'Conversion des images en WebP et lazy loading',
+                    'Optimisation du score Lighthouse (performance, SEO, accessibilité)',
+                    'Ajout de balises Schema.org JSON-LD',
+                    'Intégration des balises Open Graph et Twitter Card',
+                    'Restructuration de la hiérarchie des titres HTML',
+                    'Correction des contrastes et erreurs WAVE'
+                ],
+                resultats: 'Score Lighthouse 99/100/100/100, 0 erreur WAVE, score AIM 10/10. Livraison d\'un rapport d\'audit professionnel complet.',
+                perspectives: 'Mettre en place un CDN pour les images, implémenter le lazy loading des sections, ajouter des tests de régression.',
+                github: 'https://github.com/gaetanlc/ninacarducci.github.io'
+            }
+        };
+
+        function openModal(projetId) {
+            const data = projetsData[projetId];
+            document.getElementById('modal-titre').textContent = data.titre;
+            document.getElementById('modal-contexte').textContent = data.contexte;
+            document.getElementById('modal-stack').textContent = data.stack;
+            document.getElementById('modal-resultats').textContent = data.resultats;
+            document.getElementById('modal-perspectives').textContent = data.perspectives;
+            document.getElementById('modal-github').href = data.github;
+            const ul = document.getElementById('modal-competences');
+            ul.innerHTML = '';
+            data.competences.forEach(c => {
+                const li = document.createElement('li');
+                li.textContent = c;
+                ul.appendChild(li);
+            });
+            document.getElementById('modal').classList.add('active');
+            document.body.style.overflow = 'hidden';
+        }
+
+        function closeModal() {
+            document.getElementById('modal').classList.remove('active');
+            document.body.style.overflow = '';
+        }
+
+        document.getElementById('modal').addEventListener('click', function (e) {
+            if (e.target === this) closeModal();
+        });
     </script>
 
+    <div id="modal" class="modal">
+        <div class="modal__content">
+            <button class="modal__close" onclick="closeModal()" aria-label="Fermer">&#x2715;</button>
+            <h2 id="modal-titre"></h2>
+            <p id="modal-contexte"></p>
+            <div class="modal__section">
+                <h3>Stack technique</h3>
+                <p id="modal-stack"></p>
+            </div>
+            <div class="modal__section">
+                <h3>Compétences développées</h3>
+                <ul id="modal-competences"></ul>
+            </div>
+            <div class="modal__section">
+                <h3>Résultats</h3>
+                <p id="modal-resultats"></p>
+            </div>
+            <div class="modal__section">
+                <h3>Perspectives</h3>
+                <p id="modal-perspectives"></p>
+            </div>
+            <a id="modal-github" href="#" target="_blank" class="modal__github">Voir sur GitHub</a>
+        </div>
+    </div>
 </body>
 
 </html>
