@@ -50,7 +50,7 @@ nav a:hover {
 
 /* MAIN */
 main {
-  max-width: 800px;
+  max-width: 1200px;
   margin: 0 auto;
   padding: 60px 20px;
   display: flex;
@@ -106,6 +106,16 @@ h2 {
 
 .projet a:hover {
   color: #7c6af7;
+}
+
+.projets__grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 24px;
+}
+
+.projets__grid .projet {
+  margin-bottom: 0;
 }
 
 /* CONTACT */

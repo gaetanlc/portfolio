@@ -82,75 +82,98 @@
 
         <section id="projets">
             <h2>Projets</h2>
-
-            <article class="projet">
-                <div class="carousel" id="carousel-kasa">
-                    <div class="carousel__slides">
-                        <img src="assets/Kasa page accueil.png" alt="Kasa page accueil" class="carousel__slide active" />
-                        <img src="assets/kasa appart 1.png" alt="Kasa appartement" class="carousel__slide" />
-                        <img src="assets/kasa page a propos.png" alt="Kasa à propos" class="carousel__slide" />
+            <div class="projets__grid">
+                <article class="projet">
+                    <div class="carousel" id="carousel-kasa">
+                        <div class="carousel__slides">
+                            <img src="assets/Kasa page accueil.png" alt="Kasa page accueil"
+                                class="carousel__slide active" />
+                            <img src="assets/kasa appart 1.png" alt="Kasa appartement" class="carousel__slide" />
+                            <img src="assets/kasa page a propos.png" alt="Kasa à propos" class="carousel__slide" />
+                        </div>
+                        <button class="carousel__btn prev" onclick="changeSlide('carousel-kasa', -1)"
+                            aria-label="Image précédente Kasa">&#8249;</button>
+                        <button class="carousel__btn next" onclick="changeSlide('carousel-kasa', 1)"
+                            aria-label="Image suivante Kasa">&#8250;</button>
                     </div>
-                    <button class="carousel__btn prev" onclick="changeSlide('carousel-kasa', -1)" aria-label="Image précédente Kasa">&#8249;</button>
-                    <button class="carousel__btn next" onclick="changeSlide('carousel-kasa', 1)" aria-label="Image suivante Kasa">&#8250;</button>
-                </div>
-                <h3>Kasa</h3>
-                <p class="stack">React 18 · Vite · React Router · Sass</p>
-                <p>Plateforme de location d'appartements entre particuliers. Refonte complète du front-end à partir de maquettes Figma, avec composants réutilisables et navigation dynamique.</p>
-                <a href="https://github.com/gaetanlc/kasa" target="_blank">Voir sur GitHub</a>
-            </article>
+                    <h3>Kasa</h3>
+                    <p class="stack">React 18 · Vite · React Router · Sass</p>
+                    <p>Plateforme de location d'appartements entre particuliers. Refonte complète du front-end à partir
+                        de maquettes Figma, avec composants réutilisables et navigation dynamique.</p>
+                    <a href="https://github.com/gaetanlc/kasa" target="_blank">Voir sur GitHub</a>
+                </article>
 
-            <article class="projet">
-                <div class="carousel" id="carousel-argentbank">
-                    <div class="carousel__slides">
-                        <img src="assets/argent bank accueil.png" alt="ArgentBank accueil" class="carousel__slide active" />
-                        <img src="assets/page log in argentbank.png" alt="ArgentBank login" class="carousel__slide" />
+                <article class="projet">
+                    <div class="carousel" id="carousel-argentbank">
+                        <div class="carousel__slides">
+                            <img src="assets/argent bank accueil.png" alt="ArgentBank accueil"
+                                class="carousel__slide active" />
+                            <img src="assets/page log in argentbank.png" alt="ArgentBank login"
+                                class="carousel__slide" />
+                        </div>
+                        <button class="carousel__btn prev" onclick="changeSlide('carousel-argentbank', -1)"
+                            aria-label="Image précédente ArgentBank">&#8249;</button>
+                        <button class="carousel__btn next" onclick="changeSlide('carousel-argentbank', 1)"
+                            aria-label="Image suivante ArgentBank">&#8250;</button>
                     </div>
-                    <button class="carousel__btn prev" onclick="changeSlide('carousel-argentbank', -1)" aria-label="Image précédente ArgentBank">&#8249;</button>
-                    <button class="carousel__btn next" onclick="changeSlide('carousel-argentbank', 1)" aria-label="Image suivante ArgentBank">&#8250;</button>
-                </div>
-                <h3>ArgentBank</h3>
-                <p class="stack">React 18 · Redux Toolkit · Vite · Node.js · MongoDB</p>
-                <p>Application bancaire en ligne avec authentification JWT complète, gestion d'état global via Redux, routes protégées et modélisation d'API avec Swagger.</p>
-                <a href="https://github.com/gaetanlc/Project-10-Bank-API" target="_blank">Voir sur GitHub</a>
-            </article>
+                    <h3>ArgentBank</h3>
+                    <p class="stack">React 18 · Redux Toolkit · Vite · Node.js · MongoDB</p>
+                    <p>Application bancaire en ligne avec authentification JWT complète, gestion d'état global via
+                        Redux, routes protégées et modélisation d'API avec Swagger.</p>
+                    <a href="https://github.com/gaetanlc/Project-10-Bank-API" target="_blank">Voir sur GitHub</a>
+                </article>
 
-            <article class="projet">
-                <div class="carousel" id="carousel-724events">
-                    <div class="carousel__slides">
-                        <img src="assets/724 events accueil.png" alt="724 Events accueil" class="carousel__slide active" />
-                        <img src="assets/724 events filtre nos réalisations.png" alt="724 Events filtres" class="carousel__slide" />
-                        <img src="assets/724 events contact + footer.png" alt="724 Events contact" class="carousel__slide" />
+                <article class="projet">
+                    <div class="carousel" id="carousel-724events">
+                        <div class="carousel__slides">
+                            <img src="assets/724 events accueil.png" alt="724 Events accueil"
+                                class="carousel__slide active" />
+                            <img src="assets/724 events filtre nos réalisations.png" alt="724 Events filtres"
+                                class="carousel__slide" />
+                            <img src="assets/724 events contact + footer.png" alt="724 Events contact"
+                                class="carousel__slide" />
+                        </div>
+                        <button class="carousel__btn prev" onclick="changeSlide('carousel-724events', -1)"
+                            aria-label="Image précédente 724 Events">&#8249;</button>
+                        <button class="carousel__btn next" onclick="changeSlide('carousel-724events', 1)"
+                            aria-label="Image suivante 724 Events">&#8250;</button>
                     </div>
-                    <button class="carousel__btn prev" onclick="changeSlide('carousel-724events', -1)" aria-label="Image précédente 724 Events">&#8249;</button>
-                    <button class="carousel__btn next" onclick="changeSlide('carousel-724events', 1)" aria-label="Image suivante 724 Events">&#8250;</button>
-                </div>
-                <h3>724 Events</h3>
-                <p class="stack">React 18 · Jest · Debugging</p>
-                <p>Débogage d'une application React événementielle existante. Identification et correction de 9 bugs, rédaction d'un cahier de recette BDD avec 12 scénarios Given/When/Then, et passage de 16/16 tests Jest.</p>
-                <a href="https://github.com/gaetanlc/724events" target="_blank">Voir sur GitHub</a>
-            </article>
+                    <h3>724 Events</h3>
+                    <p class="stack">React 18 · Jest · Debugging</p>
+                    <p>Débogage d'une application React événementielle existante. Identification et correction de 9
+                        bugs, rédaction d'un cahier de recette BDD avec 12 scénarios Given/When/Then, et passage de
+                        16/16 tests Jest.</p>
+                    <a href="https://github.com/gaetanlc/724events" target="_blank">Voir sur GitHub</a>
+                </article>
 
-            <article class="projet">
-                <div class="carousel" id="carousel-nina">
-                    <div class="carousel__slides">
-                        <img src="assets/accueil nina.png" alt="Nina Carducci accueil" class="carousel__slide active" />
-                        <img src="assets/portfolio nina.png" alt="Nina Carducci portfolio" class="carousel__slide" />
-                        <img src="assets/service + contact nina.png" alt="Nina Carducci services" class="carousel__slide" />
+                <article class="projet">
+                    <div class="carousel" id="carousel-nina">
+                        <div class="carousel__slides">
+                            <img src="assets/accueil nina.png" alt="Nina Carducci accueil"
+                                class="carousel__slide active" />
+                            <img src="assets/portfolio nina.png" alt="Nina Carducci portfolio"
+                                class="carousel__slide" />
+                            <img src="assets/service + contact nina.png" alt="Nina Carducci services"
+                                class="carousel__slide" />
+                        </div>
+                        <button class="carousel__btn prev" onclick="changeSlide('carousel-nina', -1)"
+                            aria-label="Image précédente Nina Carducci">&#8249;</button>
+                        <button class="carousel__btn next" onclick="changeSlide('carousel-nina', 1)"
+                            aria-label="Image suivante Nina Carducci">&#8250;</button>
                     </div>
-                    <button class="carousel__btn prev" onclick="changeSlide('carousel-nina', -1)" aria-label="Image précédente Nina Carducci">&#8249;</button>
-                    <button class="carousel__btn next" onclick="changeSlide('carousel-nina', 1)" aria-label="Image suivante Nina Carducci">&#8250;</button>
-                </div>
-                <h3>Nina Carducci</h3>
-                <p class="stack">SEO · Accessibilité · Performance · Lighthouse</p>
-                <p>Optimisation SEO et performance d'un site portfolio de photographe. Résultat : score Lighthouse 99/100/100/100 et 0 erreur WAVE. Livraison d'un rapport d'audit professionnel complet.</p>
-                <a href="https://github.com/gaetanlc/ninacarducci.github.io" target="_blank">Voir sur GitHub</a>
-            </article>
-
+                    <h3>Nina Carducci</h3>
+                    <p class="stack">SEO · Accessibilité · Performance · Lighthouse</p>
+                    <p>Optimisation SEO et performance d'un site portfolio de photographe. Résultat : score Lighthouse
+                        99/100/100/100 et 0 erreur WAVE. Livraison d'un rapport d'audit professionnel complet.</p>
+                    <a href="https://github.com/gaetanlc/ninacarducci.github.io" target="_blank">Voir sur GitHub</a>
+                </article>
+            </div>
         </section>
 
         <section id="contact">
             <h2>Contact</h2>
-            <p class="contact__intro">Disponible pour un premier poste en intégration/développeur web. N'hésitez pas à me contacter !</p>
+            <p class="contact__intro">Disponible pour un premier poste en intégration/développeur web. N'hésitez pas à
+                me contacter !</p>
             <div class="contact__links">
                 <a href="https://github.com/gaetanlc" target="_blank">GitHub</a>
                 <a href="mailto:lecorre.gaetan1@gmail.com" target="_blank">Email</a>
