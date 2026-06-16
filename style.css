@@ -345,12 +345,14 @@ footer {
   color: #ccc;
   font-size: 1rem;
   margin-bottom: 32px;
+  text-align: center;
 }
 
 .contact__links {
   display: flex;
   gap: 16px;
   flex-wrap: wrap;
+  justify-content: center;
 }
 
 .contact__links a {
@@ -505,7 +507,7 @@ footer {
   flex-direction: column;
   gap: 20px;
   max-width: 600px;
-  margin-bottom: 40px;
+  margin: 0 auto 40px;
 }
 
 .form__group {
@@ -539,4 +541,67 @@ footer {
 
 .form__group textarea {
   resize: vertical;
+}
+
+/* RESPONSIVE MOBILE */
+@media (max-width: 768px) {
+
+  header {
+    padding: 50px 20px 40px;
+  }
+
+  header h1 {
+    font-size: 1.8rem;
+  }
+
+  header p {
+    font-size: 1.1rem;
+  }
+
+  nav {
+    gap: 16px;
+  }
+
+  main {
+    padding: 40px 16px;
+    gap: 60px;
+  }
+
+  /* PROJETS */
+  .projets__grid {
+    grid-template-columns: 1fr;
+  }
+
+  /* COMPETENCES */
+  .competences__grid {
+    grid-template-columns: 1fr;
+  }
+
+  /* MODAL */
+  .modal__content {
+    padding: 24px 20px;
+  }
+
+  .modal__content h2 {
+    font-size: 1.4rem;
+  }
+
+  /* CONTACT */
+  .contact__links {
+    flex-direction: column;
+  }
+
+  .contact__links a {
+    text-align: center;
+  }
+
+  /* LIGHTBOX */
+  .lightbox__btn {
+    padding: 10px 14px;
+    font-size: 1.8rem;
+  }
+
+  #lightbox img {
+    max-width: 95vw;
+  }
 }
