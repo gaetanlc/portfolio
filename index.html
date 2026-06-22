@@ -32,6 +32,7 @@
             <a href="#projets">Projets</a>
             <a href="#contact">Contact</a>
         </nav>
+        <button class="theme-toggle" id="theme-toggle" aria-label="Basculer le thème">🌙 Mode sombre</button>
     </header>
 
     <main>
@@ -303,6 +304,29 @@
     </div>
 
     <script>
+        // TOGGLE THÈME
+        const toggleBtn = document.getElementById('theme-toggle');
+        const savedTheme = localStorage.getItem('theme');
+
+        function applyTheme(theme) {
+            if (theme === 'light') {
+                document.body.classList.add('light-mode');
+                toggleBtn.textContent = '☀️ Mode clair';
+            } else {
+                document.body.classList.remove('light-mode');
+                toggleBtn.textContent = '🌙 Mode sombre';
+            }
+        }
+
+        applyTheme(savedTheme || 'dark');
+
+        toggleBtn.addEventListener('click', () => {
+            const isLight = document.body.classList.contains('light-mode');
+            const newTheme = isLight ? 'dark' : 'light';
+            localStorage.setItem('theme', newTheme);
+            applyTheme(newTheme);
+        });
+
         function changeSlide(carouselId, direction) {
             const carousel = document.getElementById(carouselId);
             const slides = carousel.querySelectorAll('.carousel__slide');
